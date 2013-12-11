@@ -5,13 +5,13 @@ architecture thesis!  I'll try to explain all of these operations.
 
 ## Compile the Memoir
 
-Go into the `memoir' directory.  All subdirectories in the following explanation
-are considering that `memoir' is the root directory.
+Go into the \`memoir' directory.  All subdirectories in the following explanation
+are considering that \`memoir' is the root directory.
 
 ### Install other packages
 
 Clone the mytexlive repository as your ~/texmf directory.
-Go into `~/texmf/tex/latex' and update files with
+Go into \`~/texmf/tex/latex' and update files with
 
     $ python update.py
 
