@@ -1,5 +1,4 @@
 \documentclass[ngerman,english,french,12pt,minitoc,smarttab]{mythesis}
-\usepackage{my}
 \usepackage{mydate}
 \usepackage[smartref]{myref}
 \usepackage{myps}
@@ -13,12 +12,13 @@
 \usepackage[colour,noprint]{myhyper}
 \usepackage[acronym]{myglossary}
 \usepackage{mychinese}
-\usepackage{Doc-LIMSI}
+% \usepackage{Doc-LIMSI}
 
 \input{mymacro}
 \input{myglossary}
 \input{mycolor}
 
+\newif\iflimsi \limsifalse
 \newif\ifmyreview \myreviewtrue
 \newif\ifpreamble \preambletrue
 \newif\ifintro \introtrue
@@ -59,6 +59,7 @@
 }
 
 \begin{document}
+	\iflimsi
 	\loadgeometry{LIMSI}
 	\pagestyle{empty}
 	\Reference{2012 - 11}{Mars 2012}
@@ -67,6 +68,7 @@
 	{J. \textsc{Simard}}
 	\loadgeometry{default}
 	\cleardoublepage
+	\fi
 	\pagestyle{fancy}
 	\frontmatter
 	\maketitle
@@ -5261,6 +5263,7 @@ vmd> set mysel [atomselect "top" "name C or name O or name N or name CA"]
 		\end{mysection}
 	\end{mychapter}
 	\fi
+	\iflimsi
 	\pagestyle{empty}
 	\cleardoublepage
 	\setlength{\parindent}{0mm}
@@ -5297,4 +5300,5 @@ vmd> set mysel [atomselect "top" "name C or name O or name N or name CA"]
 	}
 
 	\KeyWords{molecular docking, haptic communication, closely coupled collaboration, haptic interaction}
+	\fi
 \end{document}
