@@ -18,6 +18,7 @@
 \input{myglossary}
 \input{mycolor}
 
+\newif\ifwedding \weddingfalse
 \newif\iflimsi \limsifalse
 \newif\ifmyreview \myreviewtrue
 \newif\ifpreamble \preambletrue
@@ -47,6 +48,9 @@
 \laboratory{Laboratoire d'Informatique, de Mécanique et de Sciences de l'Ingénieur (\myCNRSLIMSI)}
 \grade{Docteur en informatique de l'Université \myname{Paris}-Sud}
 \date{\mydate[datestyle=long]{12/03/2012}}
+\ifwedding
+\logoright{bunny-bear}
+\fi
 \jury{%
 	\jurymember{Directeur de recherche}{Jean-Daniel}{Fekete}{président}{Université de \myname{Paris}-Sud -- Pôle Commun de Recherche en Informatique (\myPCRI)}
 	\jurymember{Directeur de recherche}{Jean-Marie}{Burkhardt}{rapporteur}{Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux (\myIFSTTAR)}
